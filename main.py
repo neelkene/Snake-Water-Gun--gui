@@ -145,7 +145,7 @@ try:
     elif (computer == -1 and you == 0):
         print("You lose !! ")
 except KeyError:
-    print("Invalid input. Please choose Snake, Water, or Gun.")
+    print("Invalid input. Please choose Snake, Water, or Gun.")  
     
 
 
