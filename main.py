@@ -7,6 +7,9 @@ import os
 
 ''' 1 for snake 0 for gun -1 for water
 '''
+
+# try :
+#     pass
 class SnakeWaterGunGUI:
     def __init__(self, root):
         self.root = root
@@ -113,6 +116,11 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = SnakeWaterGunGUI(root)
     root.mainloop()
+
+
+# except KeyError:
+# pass
+
 
 computer = random.choice([0 , -1 , 1 ]) 
 yourstr = input("Enter your Choice :- ").strip().capitalize() 
