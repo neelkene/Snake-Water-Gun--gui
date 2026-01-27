@@ -118,8 +118,7 @@ if __name__ == "__main__":
     root.mainloop()
 
 
-# except KeyError:
-# pass
+except KeyError:
 
 
 computer = random.choice([0 , -1 , 1 ]) 
