@@ -7,9 +7,8 @@ import os
 
 ''' 1 for snake 0 for gun -1 for water
 '''
-
-# try :
-#     pass
+  
+    
 class SnakeWaterGunGUI:
     def __init__(self, root):
         self.root = root
@@ -118,33 +117,31 @@ if __name__ == "__main__":
     root.mainloop()
 
 
-except KeyError:
 
-
-computer = random.choice([0 , -1 , 1 ]) 
-yourstr = input("Enter your Choice :- ").strip().capitalize() 
-your_dic =  {"Snake" : 1 , "Water" : -1, "Gun" : 0 } 
-reverse_dic = { 1 : "Snake" , -1 : "Water" , 0 : "Gun" }
-try:
-    you = your_dic[yourstr]
-    print(f"You choose the = {reverse_dic[you]} \nComputer choose =  {reverse_dic[computer]}")
-    
-    if (computer == you):
-        print("Your match is draw !!")
-    elif (computer == 1 and you == 0):
-        print("You Won !! ")
-    elif (computer == 1 and you == -1):
-        print("You lose !! ")
-    elif (computer == 0 and you == 1):
-        print("You lose !! ")
-    elif (computer == 0 and you == -1):
-        print("You Won !! ")
-    elif (computer == -1 and you == 1):
-        print("You Won !! ")    
-    elif (computer == -1 and you == 0):
-        print("You lose !! ")
-except KeyError:
-    print("Invalid input. Please choose Snake, Water, or Gun.")  
+    computer = random.choice([0 , -1 , 1 ]) 
+    yourstr = input("Enter your Choice :- ").strip().capitalize() 
+    your_dic =  {"Snake" : 1 , "Water" : -1, "Gun" : 0 } 
+    reverse_dic = { 1 : "Snake" , -1 : "Water" , 0 : "Gun" }
+    try:
+        you = your_dic[yourstr]
+        print(f"You choose the = {reverse_dic[you]} \nComputer choose =  {reverse_dic[computer]}")
+        
+        if (computer == you):
+            print("Your match is draw !!")
+        elif (computer == 1 and you == 0):
+            print("You Won !! ")
+        elif (computer == 1 and you == -1):
+            print("You lose !! ")
+        elif (computer == 0 and you == 1):
+            print("You lose !! ")
+        elif (computer == 0 and you == -1):
+            print("You Won !! ")
+        elif (computer == -1 and you == 1):
+            print("You Won !! ")    
+        elif (computer == -1 and you == 0):
+            print("You lose !! ")
+    except KeyError:
+        print("Invalid input. Please choose Snake, Water, or Gun.")  
     
 
 
