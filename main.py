@@ -8,13 +8,13 @@ import os
 ''' 1 for snake 0 for gun -1 for water
 '''
   
-    
+   
 class SnakeWaterGunGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("Snake Water Gun - Advanced GUI")
         self.root.geometry("400x500")
-        self.root.configure(bg="lightblue")
+        self.root.configure(bg="loghtgreen")
         
         self.choices = {"Snake": 1, "Water": -1, "Gun": 0}
         self.reverse = {1: "Snake 🐍", -1: "Water 💧", 0: "Gun 🔫"}
@@ -34,7 +34,7 @@ class SnakeWaterGunGUI:
         self.score_label.pack(pady=10)
         
         # Player vs Computer frame
-        vs_frame = tk.Frame(self.root, bg="lightblue")
+        vs_frame = tk.Frame(self.root, bg="lightgreen")
         vs_frame.pack(pady=20)
         
         self.player_label = tk.Label(vs_frame, text="You: ?", font=("Arial", 18), bg="lightgreen", width=15, height=2, relief="raised")
