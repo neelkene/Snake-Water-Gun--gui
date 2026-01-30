@@ -4,6 +4,7 @@ from tkinter import ttk
 import random
 import json
 import os
+from tkinter import ttk, messagebox, simpledialog  # simpledialog for name input
 
 ''' 1 for snake 0 for gun -1 for water
 '''
@@ -14,7 +15,7 @@ class SnakeWaterGunGUI:
         self.root = root
         self.root.title("Snake Water Gun - Advanced GUI")
         self.root.geometry("400x500")
-        self.root.configure(bg="loghtgreen")
+        self.root.configure(bg="lightblue")
         
         self.choices = {"Snake": 1, "Water": -1, "Gun": 0}
         self.reverse = {1: "Snake 🐍", -1: "Water 💧", 0: "Gun 🔫"}
@@ -23,7 +24,15 @@ class SnakeWaterGunGUI:
         self.load_scores()
         
         self.setup_ui()
+
+    # to entering the name of the player for better exp.
+    def get_player_name(self):
+        self.player_name = tk.simpledialog.askstring("Player Name", "Enter your name:", parent=self.root)
+        if not self.player_name:
+            self.player_name = "Player"
+        self.player_name = self.player_name.strip().title()
     
+
     def setup_ui(self):
         # Title
         title = tk.Label(self.root, text="Snake Water Gun", font=("Arial", 24, "bold"), bg="lightblue", fg="darkblue")
@@ -34,7 +43,7 @@ class SnakeWaterGunGUI:
         self.score_label.pack(pady=10)
         
         # Player vs Computer frame
-        vs_frame = tk.Frame(self.root, bg="lightgreen")
+        vs_frame = tk.Frame(self.root, bg="lightblue")
         vs_frame.pack(pady=20)
         
         self.player_label = tk.Label(vs_frame, text="You: ?", font=("Arial", 18), bg="lightgreen", width=15, height=2, relief="raised")
@@ -141,7 +150,9 @@ if __name__ == "__main__":
         elif (computer == -1 and you == 0):
             print("You lose !! ")
     except KeyError:
-        print("Invalid input. Please choose Snake, Water, or Gun.")  
+        print("Invalid input. Please choose Snake, Water, or Gun.")
+
+
     
 
 
