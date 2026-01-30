@@ -26,11 +26,15 @@ class SnakeWaterGunGUI:
         self.setup_ui()
 
     # to entering the name of the player for better exp.
+    
+
     def get_player_name(self):
         self.player_name = tk.simpledialog.askstring("Player Name", "Enter your name:", parent=self.root)
         if not self.player_name:
             self.player_name = "Player"
         self.player_name = self.player_name.strip().title()
+
+        
     
 
     def setup_ui(self):
@@ -58,7 +62,7 @@ class SnakeWaterGunGUI:
         self.result_label = tk.Label(self.root, text="", font=("Arial", 20, "bold"), bg="yellow", width=30, height=2, relief="solid")
         self.result_label.pack(pady=20)
         
-        # Buttons frame
+        # Buttons frame manullay 
         btn_frame = tk.Frame(self.root, bg="lightblue")
         btn_frame.pack(pady=20)
         
@@ -69,7 +73,7 @@ class SnakeWaterGunGUI:
         tk.Button(btn_frame, text="Gun 🔫", font=("Arial", 14), width=12, height=2,
                   command=lambda: self.play(0), bg="orange", fg="white", relief="raised").pack(side=tk.LEFT, padx=10)
         
-        # Reset
+        # Reset aat the bottom 
         tk.Button(self.root, text="Reset Game", font=("Arial", 14), width=20, height=2,
                   command=self.reset, bg="red", fg="white").pack(pady=20)
     
@@ -95,7 +99,7 @@ class SnakeWaterGunGUI:
         self.result_label.config(text=result)
         self.score_label.config(text=f"You: {self.player_score} | Computer: {self.computer_score}")
         self.save_scores()
-        for btn in self.root.winfo_children()[5].winfo_children():  # Disable buttons
+        for btn in self.root.winfo_children()[5].winfo_children():  
             btn.config(state="disabled")
         self.root.after(2000, self.enable_buttons)
     
