@@ -11,10 +11,10 @@ from tkinter import ttk, messagebox, simpledialog  # simpledialog for name input
   
    
 class SnakeWaterGunGUI:
-    def __init__(self, root):
+    def __init__(self,root):
         self.root = root
         self.root.title("Snake Water Gun - Advanced GUI")
-        self.root.geometry("400x500")
+        self.root.geometry("500x500")
         self.root.configure(bg="lightblue")
         
         self.choices = {"Snake": 1, "Water": -1, "Gun": 0}
