@@ -25,7 +25,7 @@ class SnakeWaterGunGUI:
         
         self.setup_ui()
 
-    # to entering the name of the player for better exp.
+    ###### to entering the name of the player for better experience 
     
 
     def get_player_name(self):
