@@ -152,7 +152,9 @@ if __name__ == "__main__":
         elif (computer == -1 and you == 1):
             print("You Won !! ")    
         elif (computer == -1 and you == 0):
-            print("You lose !! ")    
+            print("You lose !! ")   
+        else :
+            print("Wrong input")
     except KeyError:
         print("Invalid input. Please choose Snake, Water, or Gun ")
 
